@@ -4,6 +4,15 @@
             <div class="container">
                 <h1>{{ title }}</h1>
                 <p>{{ message }}</p>
+
+                <div class="row">
+                    <div class="col-lg-4 col-details" v-for="about in abouts" :key="about.title">
+                        <img :src="about.image" alt="">
+                        <h2>{{ about.title }}</h2>
+                        <p class="detail">{{ about.message }}</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -13,8 +22,26 @@
 import {ref} from 'vue'
 
 const title = ref('Who We Are?');
-const message = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar lacus sit amet tellus lobortis finibus. Integer feugiat aliquet felis non rhoncus. Nulla facilisi. Quisque porta purus id elit pharetra placerat. Donec nec enim cursus, ultricies leo sed, euismod sem. In sem elit, tempus ac fringilla eu, cursus finibus orci. Suspendisse tincidunt, felis at tristique scelerisque, turpis velit porttitor purus, et gravida mi nisl vel mi. Nulla ornare leo ultricies nulla posuere, interdum tempor sem ultricies. Cras sed orci a nunc condimentum aliquam. Praesent fermentum sapien fermentum eros pellentesque porta. Donec suscipit orci a mi efficitur, id mollis quam mollis. Suspendisse ac ultrices urna. Ut porttitor ipsum ac dolor porttitor vulputate.');
+const message = ref('The company was established in 1987 to cater the need of the construction industry which was booming then. Seeing the high demand for our products by our satisfied customers, the company decided that aside from having it locally purchased, it will also venture in the important of these products abroad to give a wide array of designs with prices much affordable by our customers who has been patronizing our products for the longest time');
 
+
+const abouts = ref({
+    mission: {
+        title: 'Mission',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a libero hendrerit nisi commodo sagittis vitae sit amet tortor. ',
+        image: '/icons/002-mission.png'
+    },
+    vision: {
+        title: 'Vision',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar lacus sit amet tellus lobortis finibus. ',
+        image: '/icons/001-shared-vision.png'
+    },  
+    goal: {
+        title: 'Goal',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar lacus sit amet tellus lobortis finibus. ',
+        image: '/icons/003-goal.png'
+    },
+})
 
 
 </script>
@@ -27,30 +54,49 @@ const message = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nu
 }
 
 h1{
-    font-family: 'Cormorant Garamond', serif;
-    font-size:4.5vmax;
+    font-family: 'Poppins', sans-serif;
+    font-size:4vmax;
     text-align: center;
-    padding:150px 0 70px;
+    padding:100px 0 30px;
     color:white;
 }
 
 p{
     display: block;
-    margin: 0 auto;
-    width:1000px;
+    margin: 10px auto;
     text-align: center;
     font-size: 1.2vmax;
     color:white;
+    font-family: 'Poppins', sans-serif;
 }
 
 img{
-    width: 600px;
+    width: 150px;
     display:block;
-    margin: 20px auto;
-    background-color: #a4f87f;
+    margin: 5px auto;
     padding: 20px;
 }
 
+h2{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.col-details{
+    background-color: #ddffe3;
+    height: 500px;
+    color:black;
+    padding:20px;
+    width: 400px;
+    margin: 10px;
+}
+
+
+.detail{
+    color:black;
+    font-size: 1vmax;
+}
 
 @media(max-width: 900px){
     p{

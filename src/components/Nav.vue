@@ -73,7 +73,12 @@ const socials = ref({
 
 .background{
     background-color: #ddffe3;
+    font-family: 'Poppins', sans-serif;
 }
 
+.nav-item{
+    padding:10px;
+    font-size: 1vmax;
+}
 
 </style>

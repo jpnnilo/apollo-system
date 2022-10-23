@@ -3,15 +3,15 @@
         <div class="background">
             <div class="container">
                 <h1>Services</h1>
-                <div class="row services">
-                    <div class="col-lg-6 " v-for="service in services" :key="service.title">
-                        <div class="row">
-                            <div class="col-lg-4">
+                <div class="row ">
+                    <div class="col-lg-6 col-md-6 " v-for="service in services" :key="service.title">
+                        <div class="row service">
+                            <div class="col-lg-2">
                                 <img :src="service.image" :alt="service.title">
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-10">
                                 <h2>{{ service.title }}</h2>
-                                <h5 v-for="desc in service.desc"> {{ desc }} </h5>
+                                <p v-for="desc in service.desc"> {{ desc }} </p>
                             </div>
                         </div>
                     </div>
@@ -39,6 +39,11 @@ const services = ref({
         desc: ['-manages employee records', '-reports employee performance and needs'],
         image: '/icons/007-salary.png'
     },
+    accounting: {
+        title: 'Accounting',
+        desc: ['-monitorrs cash, sales, expenses, recievables, loans, and liquadation movements.','-provide more accure and specific reports and data comparison'],
+        image: '/icons/003-accounting.png'
+    },
     website: {
         title: 'Website Application',
         desc: ['-fully functional websites',
@@ -52,11 +57,7 @@ const services = ref({
         desc: ['-serve your customers', '-connect with your employee','-reach new clients'],
         image: '/icons/001-app-development.png'
     },
-    accounting: {
-        title: 'Accounting',
-        desc: ['-monitorrs cash, sales, expenses, recievables, loans, and liquadation movements.','-provide more accure and specific reports and data comparison'],
-        image: '/icons/003-accounting.png'
-    },
+    
 })
 
 </script>
@@ -69,10 +70,10 @@ const services = ref({
 
 
 h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4.5vmax;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 4vmax;
     text-align: center;
-    padding: 60px 0 0;
+    padding: 80px 0 30px;
 }
 
 h2 {
@@ -87,8 +88,12 @@ img {
     margin: 70px auto 0;
 }
 
-.services{
-    margin-top: 70px;
+
+.service{
+    /* box-shadow: 2px 2px 10px gray; */
+    margin: 10px;
+    height: 200px;
+    font-family: 'Poppins', sans-serif
 }
 
 </style>

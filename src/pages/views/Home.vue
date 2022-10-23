@@ -23,7 +23,7 @@ import {ref} from 'vue';
 import Button from '../../components/Button.vue'
 
 const company = ref('Apollo System');
-const line = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar lacus sit amet tellus lobortis finibus. Integer feugiat aliquet felis non rhoncus. Nulla facilisi. Quisque porta purus id elit pharetra placerat. ');
+const line = ref('we specialize in creating web and mobile applications to improve your business  operations');
 const text = "Learn more!"; 
 
 </script>
@@ -55,6 +55,7 @@ img{
 p{
     font-size: 1.1vmax;
     margin: 50px 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 
