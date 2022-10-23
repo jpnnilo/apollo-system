@@ -6,7 +6,7 @@
                 <p>{{ message }}</p>
 
                 <div class="row">
-                    <div class="col-lg-4 col-details" v-for="about in abouts" :key="about.title">
+                    <div class="col col-details" v-for="about in abouts" :key="about.title">
                         <img :src="about.image" alt="">
                         <h2>{{ about.title }}</h2>
                         <p class="detail">{{ about.message }}</p>
@@ -49,32 +49,33 @@ const abouts = ref({
 <style scoped>
 
 .background{
-    background-color: #579b39;
-    height: 967px;
+    background-color: #1E5128;
+    height: 900px;
 }
 
 h1{
     font-family: 'Poppins', sans-serif;
-    font-size:4vmax;
+    font-size:3.5vmax;
     text-align: center;
-    padding:100px 0 30px;
-    color:white;
+    padding: 70px 0 30px;
+    color: #D8E9A8;
 }
 
 p{
-    display: block;
-    margin: 10px auto;
+    
     text-align: center;
-    font-size: 1.2vmax;
-    color:white;
+    font-size: 1vmax;
+    color: #D8E9A8;
     font-family: 'Poppins', sans-serif;
 }
 
 img{
-    width: 150px;
+    width: 100px;
     display:block;
     margin: 5px auto;
-    padding: 20px;
+    padding: 5px;
+    background-color: #4E9F3D;
+    border-radius: 50%;
 }
 
 h2{
@@ -82,30 +83,66 @@ h2{
     text-align: center;
 }
 
+.row{
+    margin: 0 auto;
+}
 
 .col-details{
-    background-color: #ddffe3;
-    height: 500px;
-    color:black;
-    padding:20px;
-    width: 400px;
-    margin: 10px;
+    
+    background-color: #191A19;
+    margin: 40px 20px 0;
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 10px #D8E9A8; */
+    color: #D8E9A8;
 }
 
 
 .detail{
-    color:black;
+    color: #D8E9A8;
     font-size: 1vmax;
 }
 
-@media(max-width: 900px){
-    p{
-    display: block;
-    margin: 0 auto;
-    width:300px;
-    text-align: center;
-    font-size: 1.2vmax;
-    color:white;
+
+
+
+@media(max-width: 769px){
+    .col-details{
+        
+        height: 380px;
+    }
+
+    .background{
+        height: 1200px;
+    }
+
 }
+
+@media(max-width: 498px){
+    .col-details{
+        margin:5px 5px;
+        padding: 5px;
+        height: 310px;
+    }
+    .background{
+        height: 1000px;
+    }
+
 }
+
+@media(max-width: 379px){
+    .background{
+        height: 1000px;
+    }
+
+} 
+
+@media(max-width: 379px){
+    .background{
+        height: 1300px;
+    }
+} 
+
+
 </style>

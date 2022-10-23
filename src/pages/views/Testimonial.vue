@@ -53,17 +53,16 @@ const testimonials = ref({
 <style scoped>
 
 .background{
-    background-color: #579b39;
+    background-color: #191A19;
     height: 967px;
      font-family: 'Poppins', sans-serif;
 }
 
 h1{
-    
+    color: #D8E9A8;
     font-size:4vmax;
     text-align:center;
-    padding: 80px;
-    color: white;
+    padding: 80px 0 10px;
 }
 
 .company{
@@ -83,7 +82,7 @@ h1{
     margin: 100px 20px 0;
     height: 450px;
     padding: 40px;
-    box-shadow: 5px 5px 20px #434445; 
+    /* box-shadow: 5px 5px 10px #1E5128;  */
 }
 
 .bi-quote{
@@ -96,7 +95,24 @@ img {
     display: block;
     margin: -130px auto 0;
     padding: 15px;
-    background-color: #579b39;
+    background-color: #191A19;
 }
+
+
+@media(max-width: 991px){
+    .background{
+        height: 1400px;
+    }
+  
+}
+
+@media(max-width: 768px){
+    .background{
+        height: 1900px;
+    }
+  
+}
+
+
 
 </style>

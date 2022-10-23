@@ -48,7 +48,7 @@ const contact = ref({
 
 <style scoped>
 .background{
-    background-color: #ddffe3;
+    background-color: #D8E9A8;
     height: 960px;
     font-family: 'Poppins', sans-serif;
 }
@@ -76,9 +76,7 @@ img{
     padding: 100px 0 ;
 }   
 
-.h1{
-    font-size: 4vmax;
-}
+
 
 .location{
     padding: 50px 50px 10px;
@@ -87,6 +85,50 @@ img{
 
 .contact {
     padding: 50px;
+}
+
+@media(max-width: 1399px){
+
+    .row{
+        padding: 40px 0 ;
+    }  
+    img{
+        width: 450px;
+    }
+
+    .background{
+        height: 700px;
+    }
+
+    h1{
+        padding: 50px 40px 0;
+    }
+   
+}
+
+@media(max-width: 991px){
+   img{
+    display:block;
+    margin: 0 auto;
+    width: 400px;
+   }
+   .background{
+        height: 1100px;
+    }
+
+    h2{
+        font-size: 3vmax;
+    }
+    p{
+        font-size: 1.6vmax;
+    }
+  
+}
+
+@media(max-width: 447px){
+    img{
+        width: 300px;
+   }
 }
 
 </style>

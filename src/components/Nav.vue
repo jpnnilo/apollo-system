@@ -72,8 +72,9 @@ const socials = ref({
 <style scoped>
 
 .background{
-    background-color: #ddffe3;
+    background-color: #D8E9A8;
     font-family: 'Poppins', sans-serif;
+    color: #191A19;
 }
 
 .nav-item{

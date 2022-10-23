@@ -6,7 +6,10 @@
                     <div class="col">
                         <h1>{{ company }}</h1>
                         <p>{{ line }}</p>
-                        <Button :text=text />
+                        <div class="button">
+                            
+                            <Button :text=text />
+                        </div>
                     </div>
                     <div class="col">
                         <img src="/images/light-bulb.jpg" alt="light bulb">
@@ -40,7 +43,8 @@ h1{
 
 .background{
     height: 910px;
-    background-color: #ddffe3;
+    background-color: #191A19;
+    color: #D8E9A8;
 
 }
 
@@ -48,7 +52,7 @@ img{
     width: 550px;
     display:block;
     margin: 100px auto;
-    background-color: #579b39;
+    background-color: #1E5128;
     padding: 20px;
 }
 
@@ -59,17 +63,56 @@ p{
 }
 
 
-@media(max-width: 900px){
+@media(max-width: 1100px){
+    
+    .background{
+        height:650px;
+    }
+    img{
+        width: 400px;
+        margin: 100px auto;
+        background-color: #579b39;
+        padding: 10px;
+    }
+}
+
+@media(max-width: 769px){
+
     h1{
-        margin: 50px 0;
+        text-align: center;
+        margin: 50px 0 20px;
+    }
+    p{
+        text-align: center;
+        margin: 20px 0;
     }
 
     img{
-    width: 300px;
-    margin: 100px auto;
-    background-color: #579b39;
-    padding: 10px;
+        margin: 20px auto;
+    }
+
+
+    .background{
+        height: 800px;
+    }
+
+    .button{
+      text-align: center;
+    }
 }
 
+@media(max-width: 436px){
+    
+    .background{
+        height: 600px;
+    }
+
+
+    img{
+        width: 250px;
+       
+    }
 }
+
+
 </style>

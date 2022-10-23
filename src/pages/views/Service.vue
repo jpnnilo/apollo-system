@@ -65,25 +65,26 @@ const services = ref({
 <style scoped>
 .background {
     height: 960px;
-    background-color: #ddffe3;
+    background-color: #D8E9A8;
 }
 
 
 h1 {
+    
     font-family: 'Poppins', sans-serif; 
-    font-size: 4vmax;
+    font-size: 3.5vmax;
     text-align: center;
-    padding: 80px 0 30px;
+    padding: 50px 0 20px;
 }
 
 h2 {
+    text-align: center;
     margin: 20px auto;
-    width:400px;
+    width:300px;
 }
 
 img {
     width: 70px;
-
     display: block;
     margin: 70px auto 0;
 }
@@ -94,6 +95,30 @@ img {
     margin: 10px;
     height: 200px;
     font-family: 'Poppins', sans-serif
+}
+
+
+@media(max-width: 991px){
+    .background{
+        height: 1200px;
+    }
+    img {
+        width: 70px;
+        margin: 10px auto 0;
+    }
+    .service{
+        /* box-shadow: 2px 2px 10px gray; */
+        margin: 10px;
+        height: 300px;
+        font-family: 'Poppins', sans-serif
+    }
+}
+
+@media(max-width: 767px){
+    .background{
+        height: 2100px;
+    }
+   
 }
 
 </style>
