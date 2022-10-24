@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div id='About'>
         <div class="background">
             <div class="container">
                 <h1>{{ title }}</h1>
                 <p>{{ message }}</p>
 
                 <div class="row">
-                    <div class="col col-details" v-for="about in abouts" :key="about.title">
+                    <div class="col col-details" v-for="about in abouts" :key="about.title" >
                         <img :src="about.image" alt="">
                         <h2>{{ about.title }}</h2>
                         <p class="detail">{{ about.message }}</p>

@@ -6,7 +6,7 @@
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <i class="bi bi-triangle-half"></i>
-                        <a class="navbar-brand" href="#">{{ title }}</a>
+                        <a class="navbar-brand" href="#Home">{{ title }}</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
@@ -14,19 +14,10 @@
                             <ul class="navbar-nav">
                                 
                                 <li class="nav-item" v-for="nav in navs" :key="nav">
-                                    <a class="nav-link" href="#">{{ nav }}</a>
+                                    <a class="nav-link" :href="`#${ nav }`">{{ nav }}</a>
                                 </li>
                                 
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown link
-                                    </a>
-                                <ul class="dropdown-menu">
-                                    <li ><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                                </li>
+                               
                             </ul>
                         </div>
 
@@ -52,11 +43,10 @@ import { ref } from 'vue'
 
 const title = ref('Apollo');
 
-
 const navs = ref({
     about: 'About',
     services: 'Services',
-    goal: 'Goal',
+    testimonial: 'Testimonial',
     contact: 'Contact',
 });
 
@@ -65,6 +55,7 @@ const socials = ref({
     ig: 'instagram',
     twitter: 'twitter',
 });
+
 
 </script>
 
@@ -80,6 +71,7 @@ const socials = ref({
 .nav-item{
     padding:10px;
     font-size: 1vmax;
+    cursor: pointer;
 }
 
 </style>

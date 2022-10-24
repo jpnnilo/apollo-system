@@ -1,13 +1,12 @@
 <template>
-    <div>
+    <div id="Home">
         <div class="background">
             <div class="container">
                 <div class="row">
-                    <div class="col">
+                    <div class="col" >
                         <h1>{{ company }}</h1>
                         <p>{{ line }}</p>
                         <div class="button">
-                            
                             <Button :text=text />
                         </div>
                     </div>
