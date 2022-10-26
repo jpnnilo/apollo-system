@@ -5,13 +5,13 @@
                 <div class="row">
                     <div class="col" >
                         <h1>{{ company }}</h1>
-                        <p>{{ line }}</p>
+                        <p>{{ line.first }} <span>{{ line.second }}</span> </p>
                         <div class="button">
                             <Button :text=text />
                         </div>
                     </div>
                     <div class="col">
-                        <img src="/images/light-bulb.jpg" alt="light bulb">
+                        <img src="/images/admin-panel/dashboard.png" alt="dashboard">
                     </div>
                 </div>
             </div>
@@ -24,8 +24,11 @@
 import {ref} from 'vue';
 import Button from '../../components/Button.vue'
 
-const company = ref('Apollo System');
-const line = ref('we specialize in creating web and mobile applications to improve your business  operations');
+const company = ref('Apollo Systems');
+const line = ref({
+    first :'we specialize in creating web and mobile applications to improve your',
+    second: 'business  operations',
+});
 const text = "Learn more!"; 
 
 </script>
@@ -34,32 +37,44 @@ const text = "Learn more!";
 <style scoped>
 
 h1{
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
     font-size:4.5vmax;
     margin: 200px auto 50px;
     padding-top:30px;
+    color:#10B981;
 }
 
 .background{
     height: 910px;
-    background-color: #191A19;
-    color: #D8E9A8;
-
+    background-color: #2A3539;
 }
 
 img{
-    width: 550px;
+    width: 750px;
     display:block;
-    margin: 100px auto;
-    background-color: #1E5128;
+    margin: 200px auto;
+    /* background-color: #1BBBA4; */
+    background-color: #10B981;
     padding: 20px;
 }
 
-p{
+p{  
+    font-weight: 600;
     font-size: 1.1vmax;
     margin: 50px 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    /* color:#10B981; */
 }
+
+span{
+    font-size: 1.1vmax;
+    font-family: 'Montserrat', sans-serif;
+    color:#10B981; 
+}
+
+
 
 
 @media(max-width: 1100px){

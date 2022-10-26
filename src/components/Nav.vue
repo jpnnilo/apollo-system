@@ -1,9 +1,8 @@
 <template>
-    <div>
         <div class="background">
             <div class="container">
                 
-                <nav class="navbar navbar-expand-lg">
+                <nav class="navbar fixed-top navbar-expand-lg">
                     <div class="container-fluid">
                         <i class="bi bi-triangle-half"></i>
                         <a class="navbar-brand" href="#Home">{{ title }}</a>
@@ -35,7 +34,6 @@
             </div>
         
         </div>
-    </div>
 </template>
 
 <script setup lang="ts">
@@ -64,14 +62,32 @@ const socials = ref({
 
 .background{
     background-color: #D8E9A8;
-    font-family: 'Poppins', sans-serif;
-    color: #191A19;
+    font-family: 'Montserrat', sans-serif;
+    color: #2A3539;
+}
+
+
+.navbar{
+    background-color: #2A3539;
+    padding: 10px 150px;
+    box-shadow: 2px 2px 3px #2A3539; 
+    
 }
 
 .nav-item{
     padding:10px;
     font-size: 1vmax;
     cursor: pointer;
+    color: white;
 }
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: #10B981;
+}
+
 
 </style>
