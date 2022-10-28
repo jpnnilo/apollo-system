@@ -3,14 +3,14 @@
         <div class="background">
             <div class="container">
                 <div class="row">
-                    <div class="col" >
-                        <h1>{{ company }}</h1>
+                    <div class="col" data-aos="fade-right" data-aos-duration="1500">
+                        <h1 >{{ company }}</h1>
                         <p>{{ line.first }} <span>{{ line.second }}</span> </p>
                         <div class="button">
                             <Button :text=text />
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col" data-aos="fade-left" data-aos-duration="1500">
                         <img src="/images/admin-panel/dashboard.png" alt="dashboard">
                     </div>
                 </div>
@@ -21,7 +21,7 @@
 
 
 <script setup lang="ts">
-import {ref} from 'vue';
+import {ref, onMounted} from 'vue';
 import Button from '../../components/Button.vue'
 
 const company = ref('Apollo Systems');
@@ -31,10 +31,16 @@ const line = ref({
 });
 const text = "Learn more!"; 
 
+
 </script>
 
 
 <style scoped>
+
+.background{
+    height: 910px;
+    background-color: #2A3539;
+}
 
 h1{
     font-family: 'Montserrat', sans-serif;
@@ -45,10 +51,7 @@ h1{
     color:#10B981;
 }
 
-.background{
-    height: 910px;
-    background-color: #2A3539;
-}
+
 
 img{
     width: 750px;

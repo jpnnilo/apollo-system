@@ -67,9 +67,17 @@ const socials = ref({
 }
 
 
+.navbar-brand{
+    color:#10B981;
+}
+
+.navbar-brand:hover{
+    color:#4de4b1;
+}
+
 .navbar{
     background-color: #2A3539;
-    padding: 10px 150px;
+    padding: 5px 150px;
     box-shadow: 2px 2px 3px #2A3539; 
     
 }

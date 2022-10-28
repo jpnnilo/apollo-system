@@ -2,12 +2,9 @@
     <div id="Contact">
         <div class="background">
             <div class="container">
-                
+
                 <div class="row">
-                    <div class="col-lg-6">
-                        <img src="/images/light-bulb.jpg" alt="light bulb">
-                    </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500">
                         <h1>{{ title }}</h1>
                         <div class="location">
                             <h2>{{ location.location }}</h2>
@@ -19,6 +16,16 @@
                             <p>{{ contact.email }}</p>
                         </div>
                     </div>
+                    <div class="col-lg-6 form" data-aos="fade-left" data-aos-duration="1500">
+                        <form>
+                            <h2>Get in Touch</h2>
+                            <Input :label="`Name`" :placeholder="`Enter your name`"></Input>
+                            <Input :label="`Email`" :placeholder="`Enter your email address`"></Input>
+                            <Input :label="`Phone`" :placeholder="`Enter your phone number`"></Input>
+                            <Input :label="`Message`" :placeholder="`Enter your phone message`"></Input>
+                            <Button :text="`Submit`"></Button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,19 +34,21 @@
 
 
 <script setup lang="ts">
-import {ref}  from 'vue'
+import { ref } from 'vue'
+import Input from '../../components/Input.vue'
+import Button from '../../components/Button.vue'
 
-const title = ref(`Let's do this together.`);
+const title = ref(`Contact Us`);
 
 const location = ref({
-        location: 'Location',
-        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    location: 'Location',
+    details: `Suite 3003-A East Tower, PSE Center Exchange Road, Ortigas Center Pasig`,
 })
 
 const contact = ref({
     contact: 'Contact',
-    number: '123-456-7890',
-    email: 'email@example.com'
+    number: `T: 632 687-7111 loc 88`,
+    email: `inquiry@apollosystems.ph`
 })
 
 
@@ -47,88 +56,96 @@ const contact = ref({
 
 
 <style scoped>
-.background{
-    background-color: #D8E9A8;
-    height: 960px;
-    font-family: 'Poppins', sans-serif;
+.background {
+    background-color: #2A3539;
+    height: 700px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-h1{
+h1 {
     padding: 90px 40px 20px;
-    font-size: 4vmax;
+    font-size: 3vmax;
+    color: #10B981;
+    text-align: center;
+    font-weight: 600;
 }
-
 h2{
-    font-size: 2vmax;
-    margin-bottom: 20px;
+    color: #10B981;
 }
 
 p{
-    font-size: 1vmax;
+    color: white;
 }
-
-img{
-    width: 650px;
-}
-
-
-.row{
-    padding: 100px 0 ;
-}   
-
-
 
 .location{
-    padding: 50px 50px 10px;
-    
+    padding:0 20px;
+    margin: 50px 0 ;
 }
 
-.contact {
-    padding: 50px;
+.contact{
+    padding:0 20px; 
+    margin: 50px 0 ;
 }
 
-@media(max-width: 1399px){
+.form{
+    margin: 35px 0;
+    background-color: white;
+    padding: 70px 80px ;
+}
 
-    .row{
-        padding: 40px 0 ;
-    }  
-    img{
+.form h2{
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+Button{
+    margin-top: 100px;
+}
+
+@media(max-width: 1399px) {
+
+    .row {
+        padding: 40px 0;
+    }
+
+    img {
         width: 450px;
     }
 
-    .background{
+    .background {
         height: 700px;
     }
 
-    h1{
+    h1 {
         padding: 50px 40px 0;
     }
-   
+
 }
 
-@media(max-width: 991px){
-   img{
-    display:block;
-    margin: 0 auto;
-    width: 400px;
-   }
-   .background{
+@media(max-width: 991px) {
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    .background {
         height: 1100px;
     }
 
-    h2{
+    h2 {
         font-size: 3vmax;
     }
-    p{
+
+    p {
         font-size: 1.6vmax;
     }
-  
+
 }
 
-@media(max-width: 447px){
-    img{
+@media(max-width: 447px) {
+    img {
         width: 300px;
-   }
+    }
 }
-
 </style>

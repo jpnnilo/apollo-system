@@ -16,12 +16,17 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 		<script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script is:inline>
+			AOS.init();
+		</script>
 	</body>
 </html>
 <style is:global>
