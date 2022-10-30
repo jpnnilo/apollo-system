@@ -1,5 +1,6 @@
 <template>
     <div id="Testimonial">
+        <div class="layer1 spacer"></div>
         <div class="background">
             <div class="container">
                 <h1>{{ title }}</h1>
@@ -83,7 +84,7 @@ function view(fName:string, fCompany:string, fPosition:string, fMessage:string, 
 
 .background{
     background-color: #F2F2F2;
-    height: 967px;    
+    height: 920px;    
     font-family: 'Montserrat', sans-serif;
     color: #2A3539;
 
@@ -92,7 +93,7 @@ function view(fName:string, fCompany:string, fPosition:string, fMessage:string, 
 h1{
     font-size:3vmax;
     text-align:center;
-    padding: 80px 0 10px;
+    padding: 30px 0 30px;
     font-weight: 600;
 }
 
@@ -151,15 +152,14 @@ h1{
 }
 
 
-/* img {
-    width: 190px;
-    border-radius: 50%;
-    display: block;
-    margin: -130px auto 0;
-    padding: 15px;
-    background-color: #191A19;
-} */
+.spacer{
+    aspect-ratio: 960/100;
+    background-size: cover;
+}
 
+.layer1{
+    background-image: url('/svg/testimonial-layer.svg');
+}
 
 @media(max-width: 991px){
     .background{

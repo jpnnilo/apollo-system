@@ -1,8 +1,8 @@
 <template>
     <div id="Contact">
+        <div class="layer1 spacer"></div>
         <div class="background">
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500">
                         <h1>{{ title }}</h1>
@@ -22,7 +22,7 @@
                             <Input :label="`Name`" :placeholder="`Enter your name`"></Input>
                             <Input :label="`Email`" :placeholder="`Enter your email address`"></Input>
                             <Input :label="`Phone`" :placeholder="`Enter your phone number`"></Input>
-                            <Input :label="`Message`" :placeholder="`Enter your phone message`"></Input>
+                            <Input :label="`Message`" :placeholder="`Enter your message`"></Input>
                             <Button :text="`Submit`"></Button>
                         </form>
                     </div>
@@ -100,6 +100,16 @@ p{
 
 Button{
     margin-top: 100px;
+}
+
+.spacer{
+    aspect-ratio: 960/100;
+    background-size:cover;
+    
+}
+
+.layer1{
+    background-image: url('/svg/contact-layer.svg');
 }
 
 @media(max-width: 1399px) {

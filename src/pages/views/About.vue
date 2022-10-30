@@ -23,7 +23,7 @@ const message = ref('Apollo Systems is a product of our pursuit to continually i
 
 .background{
     background-color: white;
-    height: 400px;
+    height: 220px;
     
     font-family: 'Montserrat', sans-serif;
 }
@@ -31,7 +31,7 @@ const message = ref('Apollo Systems is a product of our pursuit to continually i
 h1{
     font-size:2vmax;
     text-align: center;
-    padding: 100px 0 30px;
+    padding: 0 0 30px;
     color: black;
     font-weight: 600;
 }

@@ -4,7 +4,7 @@
             <div class="container">
                 <h1>{{ title }}</h1>
                 <p>{{ desc }}</p>
-                <div class="row" >
+                <div class="row spacer blob1" >
                     <div class="col-lg-6">
                         <div class="row" >
                             <div class="col-lg-6" v-for="service in services" :key="service.title">
@@ -102,11 +102,13 @@ function select(desc: string[], title: string){
 .background {
     display: block;
     margin:0 auto;
-    border-radius: 20px;
     width: 1400px;
     height: 900px;
     /* background-color: #F2F2F2; */
-    background-color: #10B981;
+    /* background-color: #10B981; */
+    background-image: url('/svg/blob-services.svg');
+    aspect-ratio: 960/900;
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
     color:white;
     font-weight: 600;
@@ -124,9 +126,6 @@ h1 {
     padding: 50px 0 20px;
 }
 
-
-
-
 .services h5{
     text-align:center;
     cursor: pointer;
@@ -140,6 +139,15 @@ p{
     font-weight: 600;
 }
 
+.spacer{
+    
+}
+
+/* .blob1{
+    margi
+} */
+
+
 .services{
     cursor:pointer;
 }
@@ -151,7 +159,7 @@ img {
     width: 100px;
     border-radius: 50%;
     background-color: white;
-    opacity: 0.6;   
+    opacity: 0.6;
 }
 
 .services:hover img{

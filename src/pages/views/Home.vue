@@ -16,6 +16,9 @@
                 </div>
             </div>
         </div>
+        <div class="layer1 spacer">
+            <!-- <img src="/svg/home-layer.svg" alt="dashboard"> -->
+        </div>
     </div>  
 </template>
 
@@ -38,7 +41,7 @@ const text = "Learn more!";
 <style scoped>
 
 .background{
-    height: 910px;
+    height: 850px;
     background-color: #2A3539;
 }
 
@@ -53,7 +56,7 @@ h1{
 
 
 
-img{
+.col img{
     width: 750px;
     display:block;
     margin: 200px auto;
@@ -78,6 +81,16 @@ span{
 }
 
 
+.spacer{
+   aspect-ratio: 960/200;
+ 
+   background-size: cover;
+}
+
+.layer1{
+    background-image:url('/svg/home-layer.svg');
+
+}
 
 
 @media(max-width: 1100px){
